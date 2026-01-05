@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	background-image: var(--bg-primary-color);
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1400px;
+	background-color: #fff;
+
+	display: flex;
+	justify-content: center;
+}
+
+

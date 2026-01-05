@@ -1,0 +1,14 @@
+:root {
+	--font-family-heading: 'Montserrat', 'Arial', 'sans-serif';
+	--color-text-heading: #5d4037;
+
+	--font-family-default: Roboto, Arial, sans-serif;
+	--color-text-default: #444;
+
+	--font-size-default: 16px;
+
+	--main-color: #e8d5c4;
+
+	--bg-primary-color: linear-gradient(30deg, #f1dfd1 0%, #f6f0ea 100%);
+	--bg-secondary-color: #fdfaf7;
+}
