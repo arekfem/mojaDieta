@@ -1,6 +1,7 @@
 export const MAINMENU = [
 	{
 		menuName: 'Nowy przepis',
+		id: 1,
 		icon: '',
 		subcategories: [
 			{
@@ -12,6 +13,7 @@ export const MAINMENU = [
 	},
 	{
 		menuName: 'Ogólne',
+		id: 2,
 		icon: '',
 		subcategories: [
 			{
@@ -33,6 +35,7 @@ export const MAINMENU = [
 	},
 	{
 		menuName: 'Posiłki',
+		id: 3,
 		icon: '',
 		subcategories: [
 			{
@@ -55,6 +58,7 @@ export const MAINMENU = [
 
 	{
 		menuName: 'Pozostałe',
+		id: 4,
 		icon: '',
 		subcategories: [
 			{

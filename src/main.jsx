@@ -15,10 +15,40 @@ const router = createBrowserRouter([
 				path: 'strona-glowna',
 				element: <Modernization />,
 			},
-			// {
-			// 	path: '',
-			// 	element:,
-			// },
+			{
+				path: 'nowy-przepis',
+				element: <Modernization />,
+				// element: <NewMeal />,
+			},
+
+			{
+				path: 'ulubione',
+				element: <Modernization />,
+				// element: <Favourites />,
+			},
+			{
+				path: 'statystyki',
+				element: <Modernization />,
+			},
+			{
+				path: 'posilki/:category',
+				element: <Modernization />,
+				// element: <MainContent />,
+			},
+			{
+				path: 'posilki/:category/:mealId',
+				element: <Modernization />,
+				// element: <MealDetails />,
+			},
+
+			{
+				path: 'ustawienia',
+				element: <Modernization />,
+			},
+			{
+				path: 'profil',
+				element: <Modernization />,
+			},
 		],
 	},
 ]);

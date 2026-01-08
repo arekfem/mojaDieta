@@ -8,10 +8,6 @@
 .wrapper {
 	width: 100%;
 	max-width: 1400px;
-	background-color: #fff;
-
 	display: flex;
 	justify-content: center;
 }
-
-
