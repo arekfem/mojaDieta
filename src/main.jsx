@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Modernization } from './components/Modernization/Modernization';
+import { NewRecipes } from './views/NewRecipes/NewRecipes.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -17,8 +18,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: 'nowy-przepis',
-				element: <Modernization />,
-				// element: <NewMeal />,
+				element: <NewRecipes />,
 			},
 
 			{

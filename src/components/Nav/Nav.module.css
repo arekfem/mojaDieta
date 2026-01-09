@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--bg-secondary-color);
-	border-bottom: 1px solid var(--main-color);
+	box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo-icon {
@@ -28,6 +28,9 @@
 }
 
 @media (width <= 768px) {
+	.nav {
+		padding: 0 1rem;
+	}
 	/*!
 	* Hamburgers
 	* @description Tasty CSS-animated hamburgers
@@ -173,11 +176,12 @@
 	.menu-active {
 		transform: translateX(0);
 	}
-
+	.categories {
+		margin-bottom: 2rem;
+	}
 	.category-box {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 1rem;
 		/* width: 100%; */
 	}
 	.category {
@@ -217,8 +221,6 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		height: 100vh;
-		box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
-		border-bottom: none;
 		border-right: 1px solid var(--main-color);
 		overflow-y: auto;
 	}

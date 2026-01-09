@@ -1,0 +1,89 @@
+.header-box {
+	margin-bottom: 2rem;
+}
+
+.container {
+	width: 100%;
+	max-width: 800px;
+}
+
+.bg-box {
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	background-color: var(--bg-secondary-color);
+	border-radius: 1rem;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+	label {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: bold;
+	}
+
+	input[type='text'],
+	input[type='number'],
+	textarea,
+	select {
+		width: 100%;
+		padding: 14px;
+		border: 2px solid var(--bg-secondary-color);
+		border-radius: 12px;
+		font-size: 1rem;
+		background-color: rgb(246, 237, 226);
+	}
+	select {
+		appearance: none;
+		background-image: url('/angle-down.svg');
+		background-repeat: no-repeat;
+		background-size: 1.25rem;
+		background-position: right 10px bottom 50%;
+	}
+
+	input:focus,
+	textarea:focus,
+	select:focus {
+		outline: none;
+		border-color: var(--main-color);
+	}
+
+	textarea {
+		min-height: 120px;
+		resize: vertical;
+	}
+}
+
+.btn-box {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+button {
+	padding: 1rem 2rem;
+
+	color: #fff;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	border: 1px solid transparent;
+}
+
+.btn-cancel {
+	background-color: rgb(255, 99, 71);
+	transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+.btn-cancel:hover {
+	color: rgb(255, 99, 71);
+	border: solid 1px rgb(255, 99, 71);
+	background-color: #fff;
+}
+
+.btn-accept {
+	background-color: var(--color-text-heading);
+	transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+
+.btn-accept:hover {
+	color: var(--color-text-heading);
+	border: 1px solid var(--color-text-heading);
+	background-color: #fff;
+}
