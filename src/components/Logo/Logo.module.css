@@ -1,0 +1,29 @@
+.logo-icon {
+	margin-right: 0.5rem;
+	height: 1.75rem;
+}
+
+.logo-name {
+	display: flex;
+	align-items: center;
+	padding: 1rem 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.logo-name-color {
+	color: var(--color-text-heading);
+}
+
+@media (375px <= width <= 768px) {
+	.logo-name {
+		font-size: 1.75rem;
+	}
+}
+
+@media (width > 768px) {
+	.logo-name {
+		margin: 1.5rem 3rem 0.5rem 1.5rem;
+		padding: 0;
+	}
+}
