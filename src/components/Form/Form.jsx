@@ -7,6 +7,8 @@ export const Form = () => {
 	const [category, setCategory] = useState('');
 	const [ingredients, setIngredients] = useState([]);
 	const [ingredientValue, setIngredientValue] = useState('');
+	// const [stepsPreparation, setStepsPreparation] = useState([]);
+	const [stepPreparationValue, setStepPreparationValue] = useState('');
 	const [prepTime, setPrepTime] = useState('');
 	const [portions, setPortions] = useState('');
 	const [difficulty, setDifficulty] = useState('');
@@ -27,13 +29,24 @@ export const Form = () => {
 		setIngredientValue('');
 	};
 
-	const editIngredient = () => {};
+	// const editIngredient = () => {};
 
 	const deleteIngredient = (id) => {
 		setIngredients((prevIngredients) =>
 			prevIngredients.filter((ingredient) => ingredient.id !== id)
 		);
 	};
+
+	// const addStepsPrep = () => {
+	// 	setStepsPreparation((prepSteps) => [
+	// 		...prepSteps,
+	// 		{
+	// 			stepPrep: stepPreparationValue,
+	// 			id: Math.random(),
+	// 		},
+	// 	]);
+	// 	setStepPreparationValue('');
+	// };
 
 	return (
 		<form onSubmit={handleSubmit} className={styles['form-wrapper']}>
@@ -77,14 +90,14 @@ export const Form = () => {
 						{ingredients.map(({ name, id }) => (
 							<li key={id} className={styles.ingredient}>
 								{name}
-								<div className={styles['ingredients-btns']}>
-									<button
+								<div className={styles['tools']}>
+									{/* <button
 										className={styles['edit-ingredient']}
 										onClick={editIngredient}>
 										EDIT
-									</button>
+									</button> */}
 									<button
-										className={styles['delete-ingredient']}
+										className={styles['delete-btn']}
 										onClick={() => deleteIngredient(id)}>
 										X
 									</button>
@@ -108,7 +121,44 @@ export const Form = () => {
 				</button>
 			</div>
 			<div className={styles['backbround-box']}>
-				<label htmlFor="">Sposób wykonania:</label>
+				<label htmlFor="stepsPreparation">Sposób wykonania:</label>
+				{/* {stepsPreparation && (
+					<ol>
+						{stepsPreparation.map(({ stepPrep, id }) => (
+							<li key={id} className={styles.ingredient}>
+								{stepPrep}
+								<div className={styles['tools']}>
+									<button
+										className={styles['delete-btn']}
+										// onClick={() => deleteIngredient(id)}
+									>
+										X
+									</button>
+								</div>
+							</li>
+						))}
+					</ol>
+				)}
+				<input
+					id="stepsPreparation"
+					type="text"
+					value={stepPreparationValue}
+					onChange={(e) => setStepPreparationValue(e.target.value)}
+					placeholder="Etap w przyogtowaniu"
+				/>
+				<button
+					className={styles['btn-accept']}
+					onClick={addStepsPrep}
+					disabled={!stepPreparationValue}>
+					Dodaj etap
+				</button> */}
+				<textarea
+					id="stepsPreparation"
+					value={stepPreparationValue}
+					onChange={(e) => setStepPreparationValue(e.target.value)}
+					placeholder="Szczegółowy opis sposobu wykonania"
+					rows={4}
+				/>
 			</div>
 			<h2>Dodatkowe informacje</h2>
 			<div className={`${styles['backbround-box']} `}>
@@ -145,13 +195,6 @@ export const Form = () => {
 					<option value="zaawansowany">Zaawansowany</option>
 				</select>
 			</div>
-			<div className={`${styles['backbround-box']} ${styles['photo-section']}`}>
-				<label>Zdjęcie:</label>
-				{/* <input type="file" accept="image/*" onChange={handlePhotoChange} />
-					{photo && (
-						<img src={photo} alt="Podgląd zdjęcia" className="photo-preview" />
-					)} */}
-			</div>
 			<div className={`${styles['backbround-box']} `}>
 				<label htmlFor="tags">Tagi (oddzielone przecinkami):</label>
 				<input
@@ -163,19 +206,11 @@ export const Form = () => {
 				/>
 			</div>
 			<div className={styles['btn-box']}>
-				<button
-					className={styles['btn-cancel']}
-					// onClick={() => navigate('/')}
-				>
-					Anuluj
-				</button>
+				<button className={styles['btn-cancel']}>Anuluj</button>
 				<button
 					type="submit"
 					className={styles['btn-accept']}
-					disabled={!title || !description}
-					// onClick={handleSave}
-					// disabled={!isFormValid}>
-				>
+					disabled={!title}>
 					Zapisz
 				</button>
 			</div>
