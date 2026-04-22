@@ -15,13 +15,13 @@
 	color: var(--color-text-heading);
 }
 
-@media (375px <= width <= 768px) {
+@media (375px <= width < 768px) {
 	.logo-name {
 		font-size: 1.75rem;
 	}
 }
 
-@media (width > 768px) {
+@media (width >= 768px) {
 	.logo-name {
 		margin: 1.5rem 3rem 0.5rem 1.5rem;
 		padding: 0;

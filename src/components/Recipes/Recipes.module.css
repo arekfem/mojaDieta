@@ -1,0 +1,7 @@
+@media (width > 992px) {
+	.recipes {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}

@@ -3,7 +3,7 @@
 	min-height: 100vh;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
 	.layout {
 		flex-direction: column;
 	}

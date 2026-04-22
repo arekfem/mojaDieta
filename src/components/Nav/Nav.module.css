@@ -3,17 +3,19 @@
 	top: 0;
 	display: flex;
 	justify-content: space-between;
+	flex-shrink: 0;
 	background-color: var(--bg-secondary-color);
+	z-index: 1;
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
 	.nav {
 		padding: 0 1rem;
 		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
 	}
 }
 
-@media (width > 768px) {
+@media (width >= 768px) {
 	.nav {
 		flex-direction: column;
 		justify-content: flex-start;

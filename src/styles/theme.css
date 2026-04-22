@@ -11,4 +11,5 @@
 
 	--bg-primary-color: linear-gradient(30deg, #f1dfd1 0%, #f6f0ea 100%);
 	--bg-secondary-color: #fdfaf7;
+	--black-gradient: linear-gradient(#d6d6d6 0%, #2d2e2e2b 100%);
 }

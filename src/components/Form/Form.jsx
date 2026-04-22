@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Form.module.css';
+import { Button } from '../Button/Button';
 
 export const Form = () => {
 	const [title, setTitle] = useState('');
@@ -33,7 +34,7 @@ export const Form = () => {
 
 	const deleteIngredient = (id) => {
 		setIngredients((prevIngredients) =>
-			prevIngredients.filter((ingredient) => ingredient.id !== id)
+			prevIngredients.filter((ingredient) => ingredient.id !== id),
 		);
 	};
 
@@ -113,12 +114,10 @@ export const Form = () => {
 					onChange={(e) => setIngredientValue(e.target.value)}
 					placeholder="Nowy składnik"
 				/>
-				<button
-					className={styles['btn-accept']}
-					onClick={addIngredient}
-					disabled={!ingredientValue}>
-					Dodaj składnik
-				</button>
+
+				<Button onClick={addIngredient} disabled={!ingredientValue}>
+					+ Dodaj składnik
+				</Button>
 			</div>
 			<div className={styles['backbround-box']}>
 				<label htmlFor="stepsPreparation">Sposób wykonania:</label>
@@ -206,13 +205,10 @@ export const Form = () => {
 				/>
 			</div>
 			<div className={styles['btn-box']}>
-				<button className={styles['btn-cancel']}>Anuluj</button>
-				<button
-					type="submit"
-					className={styles['btn-accept']}
-					disabled={!title}>
+				<Button buttonDangerStyle={true}>Anuluj</Button>
+				<Button type="submit" disabled={!title}>
 					Zapisz
-				</button>
+				</Button>
 			</div>
 		</form>
 	);
