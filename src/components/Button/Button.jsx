@@ -5,18 +5,18 @@ export const Button = ({
 	type,
 	disabled,
 	onClick,
-	buttonEditStyle,
-	buttonDangerStyle,
+	buttonCardStyle,
+	buttonDetailsStyle,
 }) => {
-	const danger = buttonDangerStyle ? styles['btn-danger'] : '';
-	const edit = buttonEditStyle ? styles['btn-edit'] : '';
+	const card = buttonCardStyle ? styles['btn-card'] : '';
+	const details = buttonDetailsStyle ? styles['btn-details'] : '';
 	return (
 		<button
 			onClick={onClick}
 			type={type}
 			disabled={disabled}
 			// className={styles.btn}>
-			className={`${styles.btn} ${danger} ${edit}`}>
+			className={`${styles.btn} ${card} ${details}`}>
 			{children}
 		</button>
 	);

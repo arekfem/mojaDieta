@@ -1,60 +1,43 @@
 .btn {
-	margin: 1rem 0;
+	/* margin: 1rem 0; */
 	padding: 1rem 2rem;
 	font-weight: bold;
 	color: #fff;
 	border-radius: 0.5rem;
 	border: none;
-	background-image: linear-gradient(
-		to right,
-		#603813 0%,
-		#b29f94 51%,
-		#603813 100%
-	);
+	background-color: var(--color-text-heading);
 	background-size: 200% auto;
-	box-shadow: 0 0 20px #eee;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 	transition:
 		color 0.3s,
-		background-position 0.3s;
+		background-color 0.3s;
 }
 
-.btn-danger {
-	background-image: linear-gradient(
-		to right,
-		#eb3349 0%,
-		#f45c43 51%,
-		#eb3349 100%
-	);
+.btn-details {
+	width: 100%;
+	margin: 0.75rem 0;
 }
 
-.btn-grad {
-	background-image: linear-gradient(
-		to right,
-		#eb3349 0%,
-		#f45c43 51%,
-		#eb3349 100%
-	);
+.btn-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-text-heading);
+	background-color: rgb(242, 238, 220);
+	font-size: 0.6rem;
+	font-weight: normal;
 }
 
-.btn-edit {
-	background-image: linear-gradient(
-		to right,
-		#1fa2ff 0%,
-		#12d8fa 51%,
-		#1fa2ff 100%
-	);
+.btn-card i {
+	font-size: 1.25rem;
+	margin-bottom: 0.25em;
 }
 
-.btn-grad:hover {
-	background-position: right center; /* change the direction of the change here */
+/* .btn:hover {
+	background-color: ;
 	color: #fff;
-	text-decoration: none;
-}
-
-.btn:hover {
-	background-position: right center;
-	color: #fff;
-}
+} */
 
 .btn:disabled {
 	color: #ffffff;

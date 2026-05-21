@@ -1,6 +1,7 @@
 :root {
 	--font-family-heading: 'Montserrat', 'Arial', 'sans-serif';
 	--color-text-heading: #5d4037;
+	--color-text-heading: rgb(140, 100, 63);
 
 	--font-family-default: Roboto, Arial, sans-serif;
 	--color-text-default: #444;
