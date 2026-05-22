@@ -1,6 +1,5 @@
 .recipe-card {
 	position: relative;
-	margin-bottom: 2rem;
 	perspective: 1000px;
 	p {
 		margin-bottom: 1.5rem;
@@ -93,7 +92,7 @@
 
 	.btns-bottom {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: 12px;
 	}
 }
@@ -116,27 +115,5 @@
 				font-size: 1.5rem;
 			}
 		}
-	}
-}
-/* @media (width >= 576px) {
-	.recipe-meta {
-		font-size: 1.25rem;
-		span {
-			i {
-				font-size: 2rem;
-			}
-		}
-	}
-} */
-
-@media (width > 992px) {
-	.recipe-card {
-		width: 45%;
-	}
-}
-
-@media (width > 1200px) {
-	.recipe-card {
-		width: 30%;
 	}
 }
